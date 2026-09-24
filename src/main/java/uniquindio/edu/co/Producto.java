@@ -53,12 +53,11 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto{" +
-                "codigoProducto=" + codigoProducto +
-                ", nombre='" + nombre + '\'' +
+        return "codigoProducto=" + codigoProducto +
+                ", nombre=" + nombre +
                 ", Categoria=" + Categoria +
                 ", precio=" + precio +
-                ", cantidad=" + cantidad +
-                '}';
+                ", cantidad=" + cantidad+"\n";
     }
 }
+

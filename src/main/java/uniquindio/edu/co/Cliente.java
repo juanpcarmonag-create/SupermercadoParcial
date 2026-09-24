@@ -1,16 +1,23 @@
 package uniquindio.edu.co;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cliente {
     private String nombre;
-    private String documento;
+    private int documento;
     private int telefono;
     private String correo;
 
-    public Cliente(String nombre, String documento, int telefono, String correo) {
+
+
+    public Cliente(String nombre, int documento, int telefono, String correo) {
         this.nombre = nombre;
         this.documento = documento;
         this.telefono = telefono;
         this.correo = correo;
+
+
     }
 
     public String getNombre() {
@@ -21,11 +28,11 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String getDocumento() {
+    public int getDocumento() {
         return documento;
     }
 
-    public void setDocumento(String documento) {
+    public void setDocumento(int documento) {
         this.documento = documento;
     }
 
