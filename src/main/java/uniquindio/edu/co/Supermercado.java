@@ -130,6 +130,8 @@ public class Supermercado {
             if(compra.getCodigoCompra()== codigoCompra){
                 existe= true;
                 break;
+            }else {
+                break;
             }
         }
         return existe;
@@ -194,8 +196,7 @@ public class Supermercado {
         String mensaje="";
         double valor=0;
         for(Compra compras: listaCompras){
-            if(compras.getFecha()==fecha){
-                mensaje+=compras+"\n";
+            if(compras.getFecha().equals(fecha)){
                 valor+=ValorVentasTotal(compras);
                 mensaje+="Valor de las compras realizadas: "+valor;
             }else {

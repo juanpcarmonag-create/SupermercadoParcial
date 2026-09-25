@@ -57,13 +57,9 @@ public class Sistema {
                         System.out.print(producto);
                         System.out.println("Producto agregado correctamente ");
                         System.out.println();
-
-                    }else{
-                        System.out.println();
-                        System.out.print("El producto ya existe");
-                        System.out.println();
                     }
                     break;
+
 
 
                 case 2:System.out.println("____Datos Cliente____");
@@ -99,7 +95,7 @@ public class Sistema {
 
                     System.out.println("Ingrese documento del cliente: ");
                     int documentoClienteVerificar=sc.nextInt();
-
+                    sc.nextLine();
                     if(supermercado.verificarCliente(documentoClienteVerificar)){
                     }else{
                         System.out.println();
@@ -202,10 +198,10 @@ public class Sistema {
                     String textoFecha1 = sc.nextLine();
                     LocalDate fecha1 = LocalDate.parse(textoFecha1, formato1);
                     double ventasTotales=0;
-
-                    if (supermercado.verificarFechaCompra(fecha1)) {
+                    System.out.println(supermercado.comprobarVentaTotalFecha(fecha1));
+                    /*if (supermercado.verificarFechaCompra(fecha1)) {
                         for (Compra compra1 : supermercado.getListaCompras()) {
-                            if (compra1.getFecha() == fecha1) {
+                            if (compra1.getFecha().equals(fecha1)) {
                                 ventasTotales += compra1.getValorTotal();
                                 System.out.println();
                                 System.out.println("Las ventas totales del " + fecha1 + " son de: " + ventasTotales);
@@ -214,7 +210,7 @@ public class Sistema {
                         }
                     }else{
                             System.out.println("Ingrese fecha válida");
-                        }
+                        }*/
                     break;
 
                 case 6:
